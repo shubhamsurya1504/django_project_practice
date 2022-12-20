@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Students Information</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+       <style>
+		.myTable { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lemonchiffon;
+  		border-collapse: collapse; 
+  		}
+		.myTable th { 
+  		background-color: lightblue;
+  		color: red; 
+  		}
+		.myTable td, 
+		.myTable th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		.myTable1 { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lightblue;
+  		border-collapse: collapse; 
+  		}
+		.myTable1 th { 
+  		background-color: goldenrod;
+  		color: white; 
+  		}
+		.myTable1 td, 
+		.myTable1 th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		hr{
+  		color: #f00;
+		background-color: #f00;
+		height: 5px;
+		}
+		body {
+		    background-colo : red
+            background-color:rgb(152, 240, 240);
+        }
+		</style>
+
+
+    </head>
+    
+    <body >
+    	<h2> <center><b><font color="red">SGGSIE&T,Nanded</font></b></h2></body></center>
+    	  <hr color="green">
+    	  <h4> <center> <b><i></i></b></center> </h4>
+    	 
+
+    	 		<table border=1  color="red" align="center" >
+				<tr>
+  				<th>User</th>
+          <th>Student_name</th>
+          <th>City</th>
+        <th>Address</th>
+          <th>Branch</th>
+          <th>Education</th>
+          <th>experience</th>
+ 				</tr>
+ 
+
+				 <h3><center><font color="maroon">Student Data </font> </h3></center>
+
+				 {% for entry in stud %}
+				 <tr>
+				   <td> {{ entry.user }}</td>
+		   <td align="center"> {{ entry.student_name }} </td>
+		   <td align="center"> {{ entry.city }} </td>
+		   <td align="center"> {{ entry.address }} </td>
+		   <td align="center"> {{ entry.branch }} </td>
+		   <td align="center"> {{ entry.education }} </td>
+		   <td align="center"> {{ entry.experience }} </td>
+ 
+				  </tr>
+					 
+			   
+				 {% endfor %}
+
+				</table>
+				<hr>
+
+				<table border=1  color="red" align="center" >
+					<tr>
+					  <th>User</th>
+			  <th>Company_name</th>
+			  <th>Website</th>
+			  <th>City</th>
+			<th>Address</th>
+			<th>Person_name</th>
+			<th>Mobile_No.</th>
+			<th>Establishment</th>
+			<th>email</th>
+			  <th>Company_Type</th>
+			  <th>Product</th>
+			  <th>Branches</th>
+					 </tr>
+	 
+	
+			  
+					 <h3><center><font color="maroon">Company Data </font> </h3></center>
+					 {% for entry in comp %}
+					 <tr>
+					   <td> {{ entry.user }}</td>
+			   <td align="center"> {{ entry.company_name }} </td>
+			   <td align="center"> {{ entry.website }} </td>
+			   <td align="center"> {{ entry.city }} </td>
+			   <td align="center"> {{ entry.location }} </td>
+			   <td align="center"> {{ entry.person_name }} </td>
+			   <td align="center"> {{ entry.mobile }} </td>
+			   <td align="center"> {{ entry.estabilishment_year }} </td>
+			   <td align="center"> {{ entry.email }} </td>
+			   <td align="center"> {{ entry.company_type }} </td>
+			   <td align="center"> {{ entry.company_product }} </td>
+			   <td align="center"> {{ entry.company_branches }} </td>
+	 
+					  </tr>
+						 
+				   
+					 {% endfor %}
+	
+					</table>
+					<hr>
+		<a href="{% url 'link_home' %}">Home</a>		
+
+
+				
+        
+    	
+    	
+    </body>
+</html>
+
+
+
